@@ -16,7 +16,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2 
-    - name: Install nightly rust
+    - name: Install Nightly Rust
       run: rustup default nightly-2020-10-06-x86_64-unknown-linux
     - name: Install Toolchain
       run: rustup target add wasm32-unknown-unknown --toolchain nightly-2020-10-06-x86_64-unknown-linux
