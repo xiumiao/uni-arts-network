@@ -16,6 +16,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Install Rust
+      run: rustup default nightly-2020-10-06 
+    - name: Install Toolchain
+      run: rustup target add wasm32-unknown-unknown --toolchain nightly-2020-10-06-x86_64-apple-darwin  
     - name: Build
       run: cargo build --verbose
     - name: Run tests
