@@ -19,7 +19,7 @@ jobs:
     - name: Install nightly rust
       run: rustup default nightly
     - name: Install Toolchain
-      run: rustup target add wasm32-unknown-unknown --toolchain stable  
+      run: rustup target add wasm32-unknown-unknown --toolchain nightly  
     - name: Build
       run: cargo build --verbose
     - name: Run tests
